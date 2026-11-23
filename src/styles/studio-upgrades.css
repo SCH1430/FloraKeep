@@ -1,0 +1,163 @@
+.terrarium-object-list,
+.terrarium-camera,
+.terrarium-templates {
+  padding: 12px;
+  border: 1px solid var(--fk-border, #d8e0d4);
+  border-radius: 12px;
+}
+
+.terrarium-object-list summary,
+.terrarium-camera summary {
+  cursor: pointer;
+  font-weight: 650;
+}
+
+.terrarium-object-list[open] summary,
+.terrarium-camera[open] summary {
+  margin-bottom: 10px;
+}
+
+.terrarium-layer-items {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 110px), 1fr));
+}
+
+.terrarium-layer-items label {
+  display: flex;
+  min-height: 36px;
+  align-items: center;
+  gap: 6px;
+}
+
+.terrarium-vessel-preview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.terrarium-vessel-preview figure { margin: 0; }
+.terrarium-vessel-preview figcaption { text-align: center; }
+.terrarium-vessel-preview .terrarium-view-buttons { grid-column: 1 / -1; }
+
+.terrarium-brush-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.terrarium-brush-options .field { flex: 1 1 135px; }
+
+.terrarium-templates article {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-block: 6px;
+}
+
+.terrarium-templates article span { flex: 1 1 110px; }
+
+.atelier-decoration {
+  display: grid;
+  gap: 7px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 145px), 1fr));
+}
+
+.atelier-plant-preview {
+  width: min(100%, 220px);
+  margin-inline: auto;
+  background: var(--fk-surface, #f5f5ed);
+  border: 1px solid var(--fk-border, #d8e0d4);
+  border-radius: 12px;
+}
+
+.atelier-plant-preview svg { display: block; width: 100%; max-height: 180px; }
+
+.gift-drafts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: end;
+}
+
+.gift-drafts .field { flex: 1 1 145px; margin: 0; }
+
+.flight-route-library,
+.flight-specimen {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.flight-route-library .field { flex: 1 1 150px; margin: 0; }
+.flight-trail-control { display: flex; align-items: center; gap: 7px; }
+.flight-specimen { padding: 10px; border: 1px solid var(--fk-border, #d8e0d4); border-radius: 12px; }
+.flight-specimen span { font-style: italic; }
+
+.pg-channel-designer,
+.pg-sketch-designer,
+.pg-music-settings {
+  margin-block-start: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--fk-border, #d8e0d4);
+}
+
+.pg-designer-options,
+.pg-music-settings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 125px), 1fr));
+  gap: 7px;
+}
+
+.pg-designer-options .field,
+.pg-music-settings .field { margin: 0; }
+.pg-music-settings .pg-action-row { grid-column: 1 / -1; }
+
+.story-program-editor {
+  padding: 12px;
+  border: 1px solid var(--fk-border, #d8e0d4);
+  border-radius: 12px;
+}
+
+.story-program-editor li,
+.story-program-toc,
+.story-program-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-block: 7px;
+}
+
+.story-program-editor li span { flex: 1 1 120px; }
+.story-program-toc [aria-current] { background: var(--sage, #e2eccf); }
+.story-program-stage { min-width: 0; }
+
+.story-timeline-editor {
+  padding: 12px;
+  border: 1px solid var(--fk-border, #d8e0d4);
+  border-radius: 12px;
+}
+
+.story-camera-frames,
+.story-actor-timing,
+.story-lines {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr));
+  gap: 8px;
+}
+
+.story-camera-frames fieldset,
+.story-lines fieldset { min-width: 0; }
+
+.story-play-dialogue {
+  padding: 8px 12px;
+  text-align: center;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  border-radius: 8px;
+  background: var(--fk-surface, #f5f5ed);
+}

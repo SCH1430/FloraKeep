@@ -1,0 +1,16 @@
+{
+  "name": "flora-keep",
+  "version": "2.6.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:web": "node scripts/build.mjs --web",
+    "test": "node --test",
+    "benchmark": "node scripts/benchmark.mjs",
+    "serve": "node scripts/serve.mjs",
+    "release": "node scripts/release.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

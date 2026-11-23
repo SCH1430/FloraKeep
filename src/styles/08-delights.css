@@ -1,0 +1,79 @@
+/* Flora Keep 2.2 — a local, illustrated botanical journal. */
+:root:where(:not(.theme-night):not(.high-contrast)){--paper:#f7f4eb;--surface:#fffdf7;--ink:#2f4535;--muted:#73806c;--line:#e0e3d3;--sage:#e8eddf;--season-tint:#e8edde;--season-accent:#6f875d;--season-warm:#bd8d69;--flora-surface:#fffdf6;--flora-panel:#eef0e3;--flora-border:#dce1ce;--fk-card:#eff1e5;--fk-card-alt:#faf5e9;--fk-field:#fffdf6;--fk-border:#dce0cd;--fk-muted:#68785d;--flora-radius:18px;--fk-radius:16px}
+:root[data-season=spring]{--season-tint:#edf0dd;--season-accent:#758b62;--season-warm:#bf8f98}
+:root[data-season=summer]{--season-tint:#e7eddb;--season-accent:#66804b;--season-warm:#bd914e}
+:root[data-season=autumn]{--season-tint:#f0e7d8;--season-accent:#8d714e;--season-warm:#b77c5d}
+:root[data-season=winter]{--season-tint:#e7ece8;--season-accent:#66877f;--season-warm:#949c85}
+body{background:var(--paper)}
+.workspace{background-image:radial-gradient(#79836a0c .65px,transparent .7px);background-size:5px 5px}
+.sidebar{background:linear-gradient(155deg,var(--season-tint),var(--paper));border-color:var(--line)}
+.page-heading h1,.section-heading h2,.dialog-head h2{font-family:var(--serif);font-weight:400;letter-spacing:-.035em}
+.page-heading h1{font-size:calc(38px * var(--text-scale));line-height:1.2}
+.eyebrow,.tiny-label,.hero-label{color:var(--season-accent);letter-spacing:.14em}
+.page-heading .eyebrow{display:flex;align-items:center;gap:9px}.page-heading .eyebrow:before{content:'';width:24px;height:1px;background:var(--season-warm)}
+.hero{border-radius:24px;background:var(--season-tint);border-color:var(--line);box-shadow:0 8px 30px #40533606}
+.hero h2{font-family:var(--serif);font-weight:400}.hero h2 em{color:var(--season-accent)}
+.hero-stamp{border-style:dashed;color:var(--season-accent);background:#fffdf21a}
+.button{border-radius:12px;min-height:46px;box-shadow:0 3px 0 #263d3210,0 6px 14px #24352b07;transition:background .18s,box-shadow .18s,transform .18s}
+.button:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #263d3210,inset 0 2px 5px #24352b18}
+.primary{background:var(--green);border-color:var(--green)}.secondary{background:var(--flora-surface);border-color:var(--fk-border)}
+button>svg,a>svg{stroke-width:1.5}.text-button>svg{transition:transform .2s}.text-button:hover>svg{transform:translateX(3px)}
+.stat{border-radius:18px;background:var(--surface);box-shadow:0 4px 16px #3d513506}.stat-icon{border-radius:15px 15px 15px 5px}
+.stat-icon.sage{background:var(--season-tint);color:var(--season-accent)}
+.plant-card{border-radius:20px;box-shadow:0 5px 22px #32473308;background:var(--surface)}
+.plant-visual{background-image:radial-gradient(ellipse at 20% 0%,#fffdf9a0,transparent 80%)}
+.plant-visual:after{content:'';position:absolute;bottom:0;left:0;right:0;height:7px;background:linear-gradient(#d5c1a0,#bda786);border-top:1px solid #f7e7c9;opacity:.55;pointer-events:none}
+.plant-content{position:relative}.plant-content:after{content:'';position:absolute;top:10px;right:15px;width:18px;height:6px;background:#c6b68a21;transform:rotate(-8deg)}
+.plant-tag{background:#fffcf2d9;border:1px solid #eee6d5;box-shadow:0 2px 4px #37452a06;border-radius:5px;color:#6d7d5e}
+.growth-track{height:4px;border-radius:4px;overflow:hidden}.growth-track i{background:var(--season-accent)}
+.bee-note,.tip-card{background:var(--season-tint);border-color:var(--line)}
+.botanical-nav{position:relative;display:grid;row-gap:5px}.botanical-nav .nav-item{grid-column:1;margin:0;padding-right:35px;min-width:0}
+.botanical-nav .nav-item:nth-of-type(1){grid-row:1}.botanical-nav .nav-item:nth-of-type(2){grid-row:2}.botanical-nav .nav-item:nth-of-type(3){grid-row:3}.botanical-nav .nav-item:nth-of-type(4){grid-row:4}
+.nav-item i{display:none}.nav-item.active{background:#3f6047;box-shadow:0 4px 12px #244d3919}
+.botanical-nav>.nav-leaf-marker{grid-row:calc(var(--nav-index) + 1);grid-column:1;z-index:2;justify-self:end;align-self:center;pointer-events:none;margin-right:13px;color:#d7dfb5;animation:nav-leaf-desktop .38s ease-out}
+.mobile-nav>.nav-leaf-marker{position:absolute;left:0;top:-8px;width:25%;height:16px;display:flex;justify-content:center;pointer-events:none;transform:translateX(calc(var(--nav-index)*100%));animation:nav-leaf-mobile .38s ease-out}
+.mobile-nav>.nav-leaf-marker svg{padding:2px;width:20px;height:20px;border-radius:50%;background:var(--surface);color:var(--season-accent);border:1px solid var(--line)}
+@keyframes nav-leaf-desktop{from{transform:translateY(calc((var(--nav-from) - var(--nav-index))*53px)) rotate(-35deg);opacity:.5}to{transform:none;opacity:1}}
+@keyframes nav-leaf-mobile{from{transform:translateX(calc(var(--nav-from)*100%))}to{transform:translateX(calc(var(--nav-index)*100%))}}
+.first-seed-note,.daily-bloom{display:flex;align-items:center;gap:18px;margin:8px 0 27px;padding:16px 22px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(120deg,var(--surface),var(--season-tint))}
+.first-seed-note .seed-packet-art{width:110px;max-height:90px;flex-shrink:0}.first-seed-note strong,.daily-bloom strong{display:block;font:calc(21px * var(--text-scale))/1.3 var(--serif);color:var(--ink)}
+.first-seed-note span,.daily-bloom span{display:block;margin-top:5px;font-size:var(--fk-small);line-height:1.6;color:var(--fk-muted)}
+.daily-bloom{padding:10px 20px;gap:15px}.care-blossom{width:68px;height:68px;flex:0 0 68px}.daily-bloom.is-complete{border-color:#c9d3ac}.care-blossom.is-open{animation:blossom-unfold 1s ease-out}.empty-inline .seed-packet-art{width:160px;height:auto;margin:0 auto 15px}
+@keyframes blossom-unfold{from{opacity:.3;transform:scale(.72) rotate(-15deg)}to{opacity:1;transform:none}}
+/* Growth, shadows and soil are SVG geometry; these restrained motions never alter state. */
+.botanical-foliage{transform-box:view-box;transform-origin:160px 268px;animation:foliage-breath 9s ease-in-out infinite}
+.plant-card:nth-child(3n) .botanical-foliage{animation-delay:-3s}.plant-card:nth-child(3n + 1) .botanical-foliage{animation-delay:-6s}
+.leaf-cast-shadow{pointer-events:none}.soil-surface{transition:fill .6s}.watering-arc{animation:watering-arc 1s ease-in-out 2}
+.watering-active .botanical-foliage{animation:water-leaf .8s ease-out 2}.watering-active .care-bee{transform:rotate(8deg)}
+@keyframes foliage-breath{0%,75%,100%{transform:rotate(0)}35%{transform:rotate(.8deg)}55%{transform:rotate(-.45deg)}}
+@keyframes water-leaf{0%,100%{transform:rotate(0)}40%{transform:rotate(2deg)}70%{transform:rotate(-1deg)}}
+@keyframes watering-arc{0%{opacity:0;stroke-dashoffset:20}40%{opacity:.7}100%{opacity:0;stroke-dashoffset:-20}}
+/* Pressed botanical specimen, with its own readable paper label. */
+.botanical-passport{position:relative;padding:20px;border:1px solid #ddd4bb;background:repeating-linear-gradient(0deg,transparent 0 27px,#b8ad8810 27px 28px),var(--surface);border-radius:6px 18px 18px 6px;box-shadow:inset 6px 0 0 #d6c8a533,0 10px 24px #343d2408}
+.passport-heading{display:flex;justify-content:space-between;align-items:center;gap:15px;font:var(--fk-small)/1.5 var(--sans);letter-spacing:.12em;color:var(--season-accent)}
+.passport-seal{display:grid;place-items:center;width:44px;height:44px;flex-shrink:0;border:1px dashed currentColor;border-radius:50%;transform:rotate(-12deg)}
+.botanical-passport .specimen-detail-art{position:relative;background:radial-gradient(ellipse,#ebe9d959,transparent 70%);border-bottom:1px solid #d7cdb580}
+.botanical-passport .specimen-detail-art:before,.botanical-passport .specimen-detail-art:after{content:'';position:absolute;z-index:1;width:46px;height:12px;background:#c1ae7826;transform:rotate(-16deg);top:18%;left:16%}
+.botanical-passport .specimen-detail-art:after{top:75%;left:72%;transform:rotate(21deg)}
+.botanical-passport>.latin{margin:18px auto 6px;font-style:italic}.botanical-passport .botanical-fact{font-size:calc(20px * var(--text-scale))}
+/* Desktop layers become a complete, vertically composed window on small screens. */
+@media(min-width:1101px){.hero{min-height:355px}.hero-copy{padding:38px;width:53%}.hero-art{right:-5%;width:62%;height:113%}.hero-copy>p{max-width:340px}}
+@media(max-width:760px){
+ .page-heading h1{font-size:calc(32px * var(--text-scale))}.hero{display:flex;flex-direction:column;min-height:0;align-items:stretch;gap:0}.hero .hero-copy{width:100%;padding:27px 25px 8px}.hero-copy>p{max-width:100%}.hero h2{font-size:calc(37px * var(--text-scale))}.hero-art{position:relative;right:auto;bottom:auto;width:100%;height:auto;aspect-ratio:820/490;margin-top:0}.hero-art>svg{width:100%;height:100%}.hero-stamp{right:18px;top:auto;bottom:18px;width:62px;height:62px;font-size:15px;background:#fffdf42e}.hero-stamp span{font-size:7px}.hero-actions{margin-top:18px}.first-seed-note,.daily-bloom{padding:14px;gap:12px}.first-seed-note .seed-packet-art{width:76px}.first-seed-note strong,.daily-bloom strong{font-size:calc(18px * var(--text-scale))}.care-blossom{width:55px;height:55px;flex-basis:55px}
+ dialog,dialog.wide{width:100%;max-width:100%;max-height:calc(100dvh - 16px - env(safe-area-inset-top));margin:auto 0 0;border-radius:26px 26px 0 0;border-bottom:0;padding-bottom:env(safe-area-inset-bottom)}
+ dialog[open]{animation:sheet-rise .28s ease-out}.dialog-head{position:sticky;top:0;background:var(--flora-surface);z-index:5;padding-top:25px}.dialog-head:before{content:'';position:absolute;top:9px;left:calc(50% - 19px);width:38px;height:4px;background:var(--fk-border);border-radius:3px}
+ .botanical-passport{padding:16px}.passport-heading{letter-spacing:.06em}.mobile-nav{box-shadow:0 -5px 25px #3c4f3410}
+}
+@keyframes sheet-rise{from{transform:translateY(40px);opacity:.3}to{transform:none;opacity:1}}
+@media(max-width:380px){.hero .hero-copy{padding:23px 19px 6px}.hero h2{font-size:calc(32px * var(--text-scale))}.hero-art{min-height:180px}.hero-stamp{display:none}.first-seed-note{align-items:flex-start}.first-seed-note .seed-packet-art{width:60px}.daily-bloom{gap:9px}.daily-bloom strong{font-size:calc(17px * var(--text-scale))}}
+html[data-text-scale="200"] .first-seed-note,html[data-text-scale="200"] .daily-bloom{align-items:flex-start;flex-wrap:wrap}
+html[data-text-scale="200"] .first-seed-note>div,html[data-text-scale="200"] .daily-bloom>div{flex:1 1 200px}
+html[data-text-scale="200"] .hero-art{position:relative;right:auto;width:100%;height:auto;aspect-ratio:820/500}
+html[data-text-scale="200"] .hero{display:flex;flex-direction:column;align-items:stretch;min-height:0}html[data-text-scale="200"] .hero-copy{width:100%;padding:24px}html[data-text-scale="200"] .hero-stamp{display:none}
+:root.theme-night{--season-tint:#314337;--season-accent:#b7c8a1;--season-warm:#c2a686;--surface:#283c30;--flora-surface:#24382e;--fk-card-alt:#2c3e30}
+.theme-night .workspace{background-image:radial-gradient(#e4ebc409 .65px,transparent .7px)}.theme-night .first-seed-note,.theme-night .daily-bloom{background:linear-gradient(120deg,#283c30,#344633);border-color:#4c6040}.theme-night .botanical-passport{background-color:#2b3c2d;border-color:#5b644b}.theme-night .plant-tag{background:#23382cdd;color:#d0dfbc;border-color:#62784c}.theme-night .dialog-head{background:var(--flora-surface)}.theme-night .hero-stamp{color:#c4ccad}.theme-night .passport-heading{color:#c0cfab}
+.high-contrast .first-seed-note,.high-contrast .daily-bloom,.high-contrast .botanical-passport{border-width:2px}.high-contrast .nav-leaf-marker{color:var(--ink)}
+.calm .botanical-foliage,.calm .care-blossom,.calm .nav-leaf-marker,.calm .watering-arc,.calm dialog[open]{animation:none!important}
+@media(prefers-reduced-motion:reduce){.botanical-foliage,.care-blossom,.nav-leaf-marker,.watering-arc,dialog[open]{animation:none!important}.text-button>svg,.button{transition:none!important}}
+@media print{.nav-leaf-marker,.first-seed-note,.daily-bloom{display:none!important}.botanical-foliage{animation:none}}
+

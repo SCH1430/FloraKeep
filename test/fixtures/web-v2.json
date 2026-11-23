@@ -1,0 +1,7 @@
+{
+  "format": "FloraKeepWeb",
+  "version": 2,
+  "createdAt": 1735689600000,
+  "payload": "{\"format\":\"FloraKeepWeb\",\"version\":1,\"savedAt\":1735689600000,\"game\":{\"coins\":1500,\"water\":4,\"fertilizer\":2,\"superFertilizer\":0,\"lastWellAt\":0,\"selectedPlantId\":\"daisy-legacy\",\"discovered\":[\"daisy\"],\"researchBySpecies\":{\"daisy\":1},\"plants\":[{\"id\":\"daisy-legacy\",\"speciesId\":\"daisy\",\"plantedAt\":1735689600000,\"lastUpdated\":1735689600000,\"growth\":0.35,\"moisture\":66,\"health\":100,\"boost\":1,\"boostUntil\":0,\"research\":1,\"earned\":0}]},\"prefs\":{\"calm\":true},\"journal\":[{\"at\":1735689600000,\"text\":\"Первое наблюдение за ромашкой\",\"kind\":\"leaf\"}],\"extras\":{\"appearance\":{\"daisy-legacy\":{\"name\":\"Тёплый лист\"}}}}",
+  "sha256": "26fb2491da27f556ed98fa79f8cf86514ee8532849b2c2611a59d538cfb06a8b"
+}

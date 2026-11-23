@@ -1,0 +1,8 @@
+{
+  "format": "FloraKeepGarden",
+  "schemaVersion": 1,
+  "appVersion": "1.4.0",
+  "createdAt": 1735689600000,
+  "payload": "{\"game\":{\"schemaVersion\":1,\"coins\":1500,\"water\":4,\"fertilizer\":2,\"superFertilizer\":0,\"lastWellAt\":0,\"selectedPlantId\":\"daisy-legacy\",\"discovered\":[\"daisy\"],\"researchBySpecies\":{\"daisy\":1},\"plants\":[{\"id\":\"daisy-legacy\",\"speciesId\":\"daisy\",\"plantedAt\":1735689600000,\"lastUpdated\":1735689600000,\"growth\":0.35,\"moisture\":66,\"health\":100,\"boost\":1,\"boostUntil\":0,\"research\":1,\"earned\":0}]},\"studio\":{\"style\":{\"scene\":\"WINDOW\",\"season\":\"SUMMER\",\"weather\":\"CLEAR\",\"material\":\"CLAY\",\"cover\":\"EARTH\",\"pattern\":0,\"potColor\":4291395932,\"nameTag\":false,\"stand\":0},\"introSeen\":true,\"order\":[\"daisy-legacy\"],\"specimens\":{}},\"journal\":{\"daisy-legacy\":[{\"t\":1735689600000,\"g\":0.35,\"m\":66}]},\"visuals\":{\"motion\":\"CALM\"},\"audio\":{\"music\":0,\"effects\":0.5,\"haptics\":false},\"experience\":{\"tutorialDone\":true}}",
+  "sha256": "0e32c0a9ce803f091ac9b876cd83f2385123250672107c52875f8a6d360bfc49"
+}

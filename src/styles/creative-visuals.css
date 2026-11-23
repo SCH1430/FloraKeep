@@ -1,0 +1,157 @@
+.terrarium-depth {
+  margin: .65rem 0;
+  padding: .65rem;
+  border: 1px solid var(--fk-border);
+  border-radius: .65rem;
+  background: var(--fk-card);
+}
+.terrarium-depth svg { display: block; width: 100%; height: auto; }
+.terrarium-depth figcaption {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .35rem .5rem;
+  color: var(--fk-muted);
+  font-size: var(--fk-small);
+}
+.terrarium-moss-textures {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-column: 1 / -1;
+  min-width: 0;
+  gap: .4rem;
+  padding: .65rem 0 0;
+  border: 0;
+}
+.terrarium-moss-textures label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-items: start;
+  gap: .15rem .25rem;
+  padding: .22rem;
+  border: 1px solid var(--fk-border);
+  border-radius: .55rem;
+  background: var(--fk-card);
+  overflow-wrap: anywhere;
+}
+.terrarium-moss-textures label:has(:checked) { border-color: var(--fk-focus); }
+.terrarium-moss-textures svg { display: block; width: 100%; min-width: 0; }
+.terrarium-moss-textures span { grid-column: 1 / -1; }
+.terra-snap-points { pointer-events: none; }
+
+.story-program-editor ol.story-filmstrip {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(10rem, 1fr);
+  gap: .7rem;
+  padding: .3rem .2rem .7rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  list-style: none;
+}
+.story-program-editor .story-filmstrip li {
+  display: grid;
+  align-content: start;
+  gap: .4rem;
+  min-width: 0;
+  padding: .45rem;
+  border: 1px solid var(--fk-border);
+  border-radius: .65rem;
+  background: var(--fk-card);
+}
+.story-scene-thumb { display: block; width: 100%; height: auto; border-radius: .4rem; }
+.story-filmstrip-label, .story-program-toc span {
+  min-width: 0;
+  display: grid;
+  gap: .1rem;
+  overflow-wrap: anywhere;
+}
+.story-filmstrip-label small, .story-program-toc small { font-size: var(--fk-small); color: var(--fk-muted); }
+.story-filmstrip-actions { display: flex; flex-wrap: wrap; gap: .28rem; }
+.story-filmstrip-actions .button { padding-inline: .45rem; }
+.story-program-toc button[data-program-index] {
+  display: grid;
+  grid-template-columns: minmax(2.8rem, 5rem) minmax(0, 1fr);
+  align-items: center;
+  gap: .55rem;
+  max-width: 100%;
+  text-align: start;
+}
+.story-path-guide { pointer-events: none; }
+.atelier-reference { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.4fr); gap: .65rem; }
+.atelier-reference figure { min-width: 0; margin: 0; overflow-wrap: anywhere; }
+.atelier-reference svg { display: block; width: 100%; height: auto; }
+.atelier-reference figcaption { margin-top: .2rem; color: var(--fk-muted); font-size: var(--fk-small); line-height: 1.35; }
+.atelier-ring.is-active { outline: none; }
+.atelier-ring:focus-visible circle { stroke-width: 2.5; stroke: var(--fk-focus); }
+.atelier-active-section { pointer-events: none; }
+
+.flight-minimap [data-flight-map-detail] { opacity: .08; }
+.flight-minimap [data-flight-map-detail].is-explored { opacity: 1; }
+.flight-minimap [data-flight-map-secret] { display: none; }
+.flight-minimap [data-flight-map-secret].is-revealed { display: inline; }
+.flight-minimap [data-flight-map-flower] { opacity: .75; }
+.flight-minimap [data-flight-map-flower].is-found { opacity: 1; }
+.flight-minimap [data-flight-map-flower].is-found path { stroke-width: .9; stroke: #385948; }
+.flight-discoveries li > figure {
+  display: grid;
+  gap: .35rem;
+  padding: .4rem;
+  border-radius: .35rem;
+  outline: 1px dashed var(--fk-border);
+  outline-offset: -3px;
+  background: var(--fk-card);
+}
+.flight-discoveries li > figure figcaption {
+  color: var(--fk-text);
+  font: 600 var(--fk-small)/1.25 var(--serif, Georgia);
+  opacity: 1;
+}
+.flight-discoveries li.is-found > figure { background: var(--fk-card-alt); }
+.pg-water-flow.pg-current { animation: pg-flow 1s linear infinite; }
+.pg-note-open { animation: pg-bloom-note .48s cubic-bezier(.22,.8,.34,1) both; transform-origin: center; transform-box: fill-box; }
+.pg-next-star { animation: pg-star-ring 1.9s ease-in-out infinite; }
+@keyframes pg-flow { to { stroke-dashoffset: -17; } }
+@keyframes pg-bloom-note { from { scale: .55; } to { scale: 1; } }
+@keyframes pg-star-ring { 50% { stroke-opacity: .55; } }
+.pg-calm .pg-current, .pg-calm .pg-note-open, .pg-calm .pg-next-star,
+.calm .pg-current, .calm .pg-note-open, .calm .pg-next-star { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  .pg-current, .pg-note-open, .pg-next-star { animation: none; }
+}
+
+.photo-design-fields {
+  min-width: 0;
+  margin: .8rem 0;
+  border: 1px solid var(--fk-border);
+  border-radius: .7rem;
+  padding: .65rem;
+}
+.photo-design-fields legend { padding-inline: .35rem; font-weight: 600; }
+.photo-series-fields summary { cursor: pointer; margin-block: .4rem; }
+.exhibit-empty, .exhibit-poster-preview {
+  max-width: 25rem;
+  margin: .7rem auto;
+  padding: .75rem;
+  border: 1px solid var(--fk-border);
+  border-radius: .65rem;
+  background: var(--fk-card);
+  text-align: center;
+}
+.exhibit-empty svg, .exhibit-poster-preview svg { width: min(100%, 15rem); height: auto; }
+.exhibit-poster-preview figcaption { display: grid; gap: .2rem; }
+.gift-wax .gift-seal-sign {
+  position: absolute;
+  inset: 7% 7% 17%;
+  color: var(--paper, #fff3d7);
+  opacity: .48;
+  pointer-events: none;
+}
+.gift-wax .gift-seal-sign > svg { display: block; position: static; inset: auto; width: 100%; height: 100%; transform: none; }
+.gift-wax span { position: relative; z-index: 1; text-shadow: 0 1px 2px #543126; }
+@media (max-width: 460px) {
+  .atelier-reference { grid-template-columns: minmax(0, 1fr); }
+  .atelier-pot-top svg { max-width: 12rem; }
+  .story-program-toc button[data-program-index] { grid-template-columns: 3rem minmax(0, 1fr); }
+}

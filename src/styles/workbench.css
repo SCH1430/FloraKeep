@@ -1,0 +1,49 @@
+.workbench-actions{list-style:none;padding:0;display:grid;gap:.55rem}
+.flora-icon-sprite{position:absolute;pointer-events:none;overflow:hidden}
+.workbench-actions li{display:flex;gap:.55rem;align-items:stretch}
+.workbench-actions li>button:first-child{flex:1;justify-content:flex-start;text-align:start}
+.workbench-panel{display:grid;gap:.65rem}
+.workbench-panel details{padding:.65rem;background:var(--fk-card,var(--surface));border:1px solid var(--fk-border,var(--line));border-radius:.6rem}
+.workbench-table{overflow-x:auto;margin:.75rem 0}
+.workbench-table table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+.workbench-table :is(th,td){padding:.4rem;border-bottom:1px solid var(--line);text-align:center;white-space:nowrap}
+.experiment-graph{display:block;width:min(100%,38rem);margin:.6rem auto}
+.workbench-report{border:1px solid var(--fk-border,var(--line));padding:1rem;white-space:pre-wrap;overflow-wrap:anywhere;max-height:22rem;overflow:auto}
+[data-workbench-form]{display:grid;gap:.75rem}
+[data-workbench-form] textarea{background:var(--fk-card,var(--surface));border:1px solid var(--fk-border,var(--line));border-radius:.5rem;box-sizing:border-box;color:inherit;font:inherit;padding:.65rem;width:100%}
+#storage-warning{display:flex;flex-wrap:wrap;align-items:center;gap:.65rem}
+:root:not(.theme-night) .mobile-nav a:not(.active){color:#53684a}
+:root:not(.theme-night) .journal-entry time{color:#52694b}
+.living-card .plant-tag.needs-water svg{flex:none}
+.compact-profile{max-width:13rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.compact-metrics{display:none}
+.collection-compact{grid-template-columns:1fr;gap:.5rem}
+.collection-compact .living-card{min-height:0;display:grid;grid-template-columns:1fr auto;align-items:center;padding:.5rem .75rem;gap:.5rem}
+.collection-compact .plant-open{display:block;text-align:left}
+.collection-compact .plant-content{padding:.35rem 0}
+.collection-compact .plant-visual,.collection-compact .plant-details,.collection-compact .card-care,.collection-compact .latin{display:none}
+.collection-compact .favorite-toggle{position:static;grid-column:2;grid-row:1}
+.collection-compact .compact-metrics{display:block;font-size:.9em;margin-top:.15rem}
+.catalog-filter-status{display:flex;gap:.5rem;flex-wrap:wrap;margin:.5rem 0}
+.catalog-filter-status:empty{display:none}
+.living-card[data-last-opened]{border-color:var(--fk-green,#5d855d)}
+.deferred-plant-art{display:block;width:45%;height:45%;border-radius:50%;margin:auto;background:radial-gradient(ellipse,#dce8d1 20%,transparent 73%);opacity:.55}
+.studio-progress{margin-top:.55rem;display:flex;gap:.6rem;align-items:center}
+.studio-progress progress{width:min(18rem,65%)}
+#quiet-controls{display:flex;flex-wrap:wrap;justify-content:center;gap:.65rem;align-items:end}
+#quiet-controls .field{margin:0}
+#sound-caption{position:fixed;z-index:250;bottom:5.5rem;right:1rem;background:#253e31;color:#fff;padding:.45rem .75rem;border-radius:2rem;font-size:.9rem}
+.motion-example{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;text-align:center}
+.motion-example figure{margin:0}
+.motion-example svg{display:block;width:100%;max-height:14rem}
+.motion-example *{animation:none!important;transition:none!important}
+.low-background-detail .scene-rain path:nth-child(n+10),
+.low-background-detail .scene-snow circle:nth-child(n+10){display:none}
+.low-background-detail .welcome-bee svg,.low-background-detail .nav-leaf-marker{animation:none!important}
+@media(prefers-reduced-motion:no-preference){
+  :root:not(.calm),:root:not(.calm) .sidebar,:root:not(.calm) .workspace{transition:background-color .45s ease,color .35s ease}
+}
+@media(max-width:900px){.compact-profile{max-width:8rem}}
+@media(max-width:560px){
+  dialog[data-kind="plant"] .care-actions{position:sticky;bottom:0;background:var(--fk-card,var(--surface));padding:.6rem;z-index:2;border-radius:.6rem}
+}

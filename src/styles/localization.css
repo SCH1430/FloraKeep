@@ -1,0 +1,25 @@
+.flora-language {
+  min-width: 2.35rem;
+  min-height: 2.35rem;
+  padding: .22rem .36rem;
+  border: 1px solid var(--fk-border, #d3ded2);
+  border-radius: .62rem;
+  background: var(--fk-surface, #fff);
+  color: var(--fk-text, #294833);
+  font-size: .76rem;
+  font-weight: 700;
+  flex: none;
+}
+@media (max-width: 430px) {
+  .flora-language { min-width: 2rem; min-height: 2rem; padding-inline: .25rem; }
+  html[data-text-scale="100"] .topbar .resources {
+    width: 100%;
+    gap: .25rem;
+    flex-wrap: nowrap;
+  }
+  html[data-text-scale="100"] .topbar .compact-profile {
+    flex: 1 1 5rem;
+    min-width: 0;
+    max-width: 8rem;
+  }
+}

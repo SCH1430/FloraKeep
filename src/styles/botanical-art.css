@@ -1,0 +1,88 @@
+/* Materials and illustration treatment shared by the notebook and studio surfaces. */
+:root {
+  --flora-moss:#526f54;
+  --flora-clay:#a96451;
+  --flora-linen:#ede5d1;
+  --flora-pollen:#c79540;
+  --flora-rain:#587a84;
+  --flora-grain:radial-gradient(ellipse at 22% 28%, #8b775216 0 12%, transparent 25%),
+    radial-gradient(ellipse at 56% 78%, #fffef2ac 0 15%, transparent 28%);
+  --flora-grain-size:9px 13px,17px 11px;
+}
+
+:root:not(.theme-night,.high-contrast,.personal-palette) {
+  --paper:#f8f6ec;
+  --fk-card:#fcfbf3;
+  --fk-card-alt:#edf1e5;
+  --fk-field:#f9f7ef;
+  --fk-border:#dbe0d1;
+  --fk-muted:#556654;
+}
+
+:root:not(.theme-night,.high-contrast) .specimen,
+:root:not(.theme-night,.high-contrast) .herbarium-blank,
+:root:not(.theme-night,.high-contrast) .journal-blank-art,
+:root:not(.theme-night,.high-contrast) .journal-entry {
+  background-image:var(--flora-grain);
+  background-size:var(--flora-grain-size);
+}
+
+:root:not(.theme-night,.high-contrast) .study-art {
+  background:#eef0e8cc;
+  border:1px solid #d3dacc;
+  border-radius:17px;
+}
+
+:root:not(.theme-night,.high-contrast) .atelier-wheel-stage {
+  background-image:radial-gradient(ellipse at 50% 20%, #f9e8d7aa, #ead7c3 88%);
+}
+
+:root:not(.theme-night,.high-contrast) .gift-composer .gift-intro {
+  background-image:var(--flora-grain),linear-gradient(120deg,#f4e6c9,#f9f0df);
+  background-size:var(--flora-grain-size),auto;
+}
+
+.flora-monochrome-mark {display:block;width:2.4rem;height:2.4rem;flex:none;color:currentColor}
+.flora-ornament {display:block;width:min(15rem,100%);height:auto;color:var(--flora-moss);opacity:.65}
+.botanical-empty-art {display:block;width:min(10rem,48vw);height:auto;margin-inline:auto}
+.pot-top-view {display:block;width:100%;height:auto;max-height:12rem}
+.ceramic-material-samples {display:block;width:100%;height:auto;max-width:25rem;margin-inline:auto}
+.study-art svg[data-art-view="profile"],
+.study-art svg[data-art-view="macro"] {display:block;width:auto;max-width:100%;height:auto;max-height:24rem;margin-inline:auto}
+.scene-glass-rain {pointer-events:none}
+.workspace .resource.water {--flora-resource:var(--flora-rain)}
+.workspace .resource.coin,.workspace .resource.coins {--flora-resource:var(--flora-pollen)}
+:root:not(.theme-night,.high-contrast) .resource > svg {color:var(--flora-resource,currentColor)}
+
+@media (prefers-reduced-motion:no-preference) {
+  :root:not(.calm,.low-background-detail) svg[data-air="wind"] .botanical-foliage {
+    transform-box:fill-box;
+    transform-origin:center bottom;
+    animation:flora-stem-wind 6.4s ease-in-out infinite alternate;
+  }
+  :root:not(.calm,.low-background-detail) svg[data-air="wind"] .leaf-organ > :is(path,g) {
+    transform-box:fill-box;
+    transform-origin:center bottom;
+    animation:flora-leaf-wind 3.1s ease-in-out infinite alternate;
+  }
+  :root:not(.calm,.low-background-detail) svg[data-air="wind"] .leaf-organ:nth-of-type(2n) > :is(path,g) {animation-delay:-1.45s}
+}
+
+@keyframes flora-stem-wind {
+  0%,45%{transform:rotate(-.2deg)}
+  100%{transform:rotate(.75deg)}
+}
+@keyframes flora-leaf-wind {
+  0%,40%{transform:rotate(-.8deg)}
+  100%{transform:rotate(2.6deg)}
+}
+
+@media print {
+  .flora-monochrome-mark,.flora-ornament {color:#25362c;opacity:1}
+  .specimen,.journal-entry,.herbarium-blank {background-image:none!important}
+}
+
+@media (forced-colors:active) {
+  .flora-monochrome-mark,.flora-ornament {color:CanvasText}
+  .specimen,.journal-entry,.herbarium-blank {background-image:none!important}
+}

@@ -1,0 +1,53 @@
+.garden-upgrade-toolbar,
+.garden-upgrade-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .55rem;
+}
+.garden-upgrade-toolbar { margin: .6rem 0 1.2rem; }
+.garden-upgrade-actions { margin: .65rem 0; }
+.garden-upgrade { display: grid; gap: .8rem; min-width: 0; }
+.garden-upgrade h3 { font-size: 1.15em; }
+.garden-upgrade :where(h3, h4, p, ul, ol, dl) { margin-top: 0; margin-bottom: .4rem; }
+.garden-upgrade button { margin: .15rem 0; }
+.garden-upgrade-grid,
+.garden-training,
+.garden-upgrade-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  gap: .75rem;
+  align-items: start;
+}
+.garden-upgrade-grid article,
+.garden-field-note,
+.garden-example,
+.garden-inline-note,
+.garden-bloom-milestones {
+  border: 1px solid var(--fk-border, #d7e3cd);
+  border-radius: .72rem;
+  padding: .72rem .86rem;
+  background: var(--fk-surface, var(--surface, #fff));
+}
+.garden-inline-note { margin: .55rem 0; }
+.garden-training { align-items: center; }
+.garden-example { margin: .7rem 0; }
+.garden-example p { margin: .35rem 0; }
+.garden-training svg,
+.garden-upgrade-grid article svg { width: 100%; height: auto; max-height: 15rem; }
+.garden-upgrade-grid .button { margin-inline-end: .45rem; }
+.garden-upgrade-list { display: grid; gap: .45rem; }
+.garden-upgrade-form .field { width: 100%; min-width: 0; margin: 0; }
+.garden-upgrade-form > button { justify-self: start; align-self: end; }
+.garden-upgrade-form input[type="file"] { max-width: 100%; }
+.garden-passport { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .25rem .75rem; }
+.garden-passport dd { margin: 0; }
+.garden-upgrade dl dt { font-weight: 600; }
+.garden-field-note img { display: block; width: min(100%, 16rem); height: auto; border-radius: .45rem; }
+.garden-sign { width: fit-content; border: 1px solid var(--fk-border, #d7e3cd); border-radius: .65rem; padding: .45rem .8rem; margin: 0 0 .8rem; background: var(--fk-surface, #fff); font-weight: 600; }
+.garden-bloom-milestones { margin: 0 0 1rem; }
+.garden-upgrade time { white-space: normal; }
+@media (max-width: 580px) {
+  .garden-upgrade-toolbar .button { padding-inline: .75rem; }
+  .garden-upgrade-form { grid-template-columns: 1fr; }
+}
